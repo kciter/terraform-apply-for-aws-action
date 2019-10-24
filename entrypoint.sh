@@ -9,6 +9,7 @@ export VARIABLES=$INPUT_VARIABLES
 
 cd $INPUT_PATH
 
+echo "terraform init -input=false"
 terraform init -input=false
 
 var_args=""
@@ -17,6 +18,5 @@ for var in $VARIABLES; do
   var_args="$var_args -var $var"
 done
 
-output=$(sh -c "terraform apply -no-color -input=false -auto-approve $var_args")
-
-echo "$output"
+echo "terraform apply -no-color -input=false -auto-approve $var_args"
+terraform apply -no-color -input=false -auto-approve $var_args
