@@ -19,13 +19,13 @@ jobs:
   provisioning:
     runs-on: ubuntu-latest
     steps:
-    - uses: kciter/terraform-apply-for-aws@v1
+    - uses: kciter/terraform-apply-for-aws-action@v1
       with:
         access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         region: ap-northeast-2
-        variables: app_version=${{ github.sha }}
-        path: .infra/dev
+        variables: var=${{ github.sha }}
+        path: terraform/dev
 ```
 
 
