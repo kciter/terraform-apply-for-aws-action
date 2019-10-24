@@ -14,7 +14,7 @@ terraform init -input=false
 var_args=""
 VARIABLES=$(echo "$VARIABLES" | tr "," "\n")
 for var in $VARIABLES; do
-  var_args="$docker_tag_args -var $var"
+  var_args="$var_args -var $var"
 done
 
 output=$(sh -c "terraform apply -no-color -input=false -auto-approve $var_args")

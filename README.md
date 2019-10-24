@@ -1,4 +1,4 @@
-# Terraform Apply for AWS
+# Terraform Apply for AWS Action
 
 This Action allows you to create, change, and improve AWS infrastructure by Terraform.
 
