@@ -1,0 +1,25 @@
+name: Terraform Apply for AWS
+author: Lee Sun-Hyoup <kciter@naver.com>
+branding:
+  icon: truck
+  color: purple
+description: Create, change, and improve AWS infrastructure by Terraform.
+inputs:
+  access_key_id:
+    description: The AWS access key id
+    required: true
+  secret_access_key:
+    description: The AWS secret access key
+    required: true
+  region:
+    description: The AWS default region
+    required: true
+  variables:
+    description: Comma-separated string of Terraform variables
+    default: ""
+  path:
+    description: Path to Terraform directory, defaults to the working directory
+    default: .
+runs:
+  using: docker
+  image: Dockerfile
