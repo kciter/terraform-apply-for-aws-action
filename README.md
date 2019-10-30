@@ -19,7 +19,7 @@ jobs:
   provisioning:
     runs-on: ubuntu-latest
     steps:
-    - uses: kciter/terraform-apply-for-aws-action@v1
+    - uses: kciter/terraform-apply-for-aws-action@v2
       with:
         access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
