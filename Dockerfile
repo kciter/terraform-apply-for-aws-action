@@ -1,4 +1,4 @@
-FROM hashicorp/terraform:0.12.12
+FROM hashicorp/terraform:0.12.16
 
 ADD entrypoint.sh /entrypoint.sh
 
